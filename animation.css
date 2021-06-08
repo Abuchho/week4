@@ -1,0 +1,56 @@
+:root {
+    --blue: steelblue;
+    --red: firebrick;
+    --green: mediumseagreen;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.center {
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.box {
+    height: 250px;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    animation-name: change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    transition-duration: .5s;
+
+}
+
+.box h1:hover {
+    transform: rotate(360deg);
+
+}
+
+@keyframes change {
+    0%{background-color: #333;}
+    25%{background-color: var(--red);}
+    50%{background-color: var(--blue);}
+    75%{background-color: var(--green);}
+    100%{background-color: #333;}
+    
+}
