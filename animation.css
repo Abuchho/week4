@@ -20,5 +20,37 @@ body {
     display:flex;
     align-items: center;
     justify-items: center;
+
+}
+
+.box {
+    height: 250px;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    animation-name: change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    transition-duration: .5s;
+
+}
+
+.box h1:hover {
+    transform: rotate(360deg);
+
+}
+
+@keyframes change {
+    0%{background-color: #333;}
+    25%{background-color: var(--red);}
+    50%{background-color: var(--blue);}
+    75%{background-color: var(--green);}
+    100%{background-color: #333;}
     
 }
